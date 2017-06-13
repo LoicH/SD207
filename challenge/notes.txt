@@ -1,0 +1,27 @@
+Quand on prend un fichier et qu'on le charge avec librosa.load() 
+on obtient une matrice de 20 * 1296 élements.
+Chaque colonne correspond au spectre d'une frame (intervalle de temps)
+et chaque ligne correspond à un coefficient.
+(1 ligne = très peu d'informations...)
+Ce qu'on peut faire, c'est considérer que chaque fichier audio 
+nous donne 1296 vecteurs d'entraînements pour un label.
+Ça nous donnerait 1296 * 587 (700k) fichiers d'entraînement...
+Ou alors on moyenne par tranche de 100 vecteurs pour avoir ~13 vecteurs
+par fichier audio.
+
+
+Utiliser GMM (comme dans le papier http://www.cs.tut.fi/~mesaros/pubs/mesaros_eusipco2016-dcase.pdf ) ou du KNN ?
+
+
+# TODO : 
+- Extraire les vecteurs d'info des fichiers et les enregistrer (JSON ?)
+- Utiliser les classifieurs (Knn / GMM / SVM)
+
+
+
+# Papiers : 
+
+http://www.cs.tut.fi/sgn/arg/dcase2016/documents/workshop_slides/Richard-keynote-DCASE2016workshop-slides.pdf
+- 11 of the top 20 systems use MFCC
+- Mono marche bien, mais le stéréo peut aider
+- Meilleurs classifieurs : NN, SVM, NMF, GMM
