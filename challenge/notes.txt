@@ -9,9 +9,27 @@ nous donne 1296 vecteurs d'entraînements pour un label.
 Ou alors on moyenne par tranche de 100 vecteurs pour avoir ~13 vecteurs
 par fichier audio.
 
-
+But du jeu, avoir mieux que donner une classe au hasard: ~18 succès sur 290 testing samples 
 Utiliser GMM (comme dans le papier http://www.cs.tut.fi/~mesaros/pubs/mesaros_eusipco2016-dcase.pdf ) ou du KNN ?
+En prenant le vote : 'sample' est dans la classe n°5, les elements de la classe 5 venaient principalement de la classe 'beach' donc on met ce sample dans la classe 'beach'.
+Avec 20 MFCC et 10 vect/sample
+-GMM par défaut : 
+    Success rate: 114/290.
+- CV rapide : 
+    parameters = {'n_components':[16],
+             'covariance_type': ('full', 'tied', 'diag', 'spherical'),
+             'tol': np.logspace(-3, -1, 3),}
+    117/290...
+- CV + :
+parameters = {'n_components':[16],
+             'covariance_type': ('full', 'tied', 'diag', 'spherical'),
+             'tol': np.logspace(-5, -1, 6),}
+    ~90/290..
+    
+30 coefs, 60 vecteurs, (1 ou 3) NN classifier: 138/290 !
 
+On essaie avec plus d'infos.
+40 MFCC et 200 vect/sample
 
 # TODO : 
 - Extraire les vecteurs d'info des fichiers et les enregistrer (JSON ?)

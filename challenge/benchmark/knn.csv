@@ -1,0 +1,25 @@
+algorithm, n_neighbors, weights, total (s)
+auto,1,uniform,   4.3
+auto,1,distance,   4.2
+auto,1,uniform,   4.5
+auto,1,uniform,   4.5
+auto,1,distance,   4.1
+auto,1,distance,   4.0
+auto,11,uniform,   7.0
+auto,11,uniform,   7.1
+auto,11,distance,   7.0
+auto,11,uniform,   7.0
+auto,11,distance,   7.1
+auto,11,distance,   7.1
+ball_tree,1,uniform,  22.1
+ball_tree,1,uniform,  24.4
+ball_tree,1,distance,  25.5
+ball_tree,1,uniform,  26.3
+ball_tree,1,distance,  23.0
+ball_tree,1,distance,  24.4
+ball_tree,11,uniform,  34.7
+ball_tree,11,uniform,  33.9
+ball_tree,11,uniform,  28.0
+ball_tree,11,distance,  28.5
+ball_tree,11,distance,  28.0
+ball_tree,11,distance,  30.1
