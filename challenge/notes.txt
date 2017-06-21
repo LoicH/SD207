@@ -31,6 +31,16 @@ parameters = {'n_components':[16],
 On essaie avec plus d'infos.
 40 MFCC et 200 vect/sample
 
+Avec 20 MFCC et 100 vect/sample: 
+- logit: {'C': 1.0, 'penalty': 'l1'}, 
+Done. Success rate: 166/290 (57.24 %)
+
+
+Avec les variances : 
+- LDA : Best parameters:  {'solver': 'svd'}
+Done. Success rate: 177/290 (61.03 %)
+
+
 # TODO : 
 - Extraire les vecteurs d'info des fichiers et les enregistrer (JSON ?)
 - Utiliser les classifieurs (Knn / GMM / SVM)
