@@ -1,5 +1,5 @@
-# SD 207:
-This repo contains the challenge done in the course '' at Télécom ParisTech.
+# SD 207: Statistical Machine Learning in practice
+This repo contains the challenge done in the course 'SD 207: Statistical Machine Learning in practice' at Télécom ParisTech.
 
 The challenge was to recognize accurately audio scenes from real life, with training.
 We had lots of 30 seconds samples recorded inside bus, trains, at the beach, in restaurants...
